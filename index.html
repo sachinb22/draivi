@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Your Future</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a href="#" class="logo">
+            <img src="./assets/Logo.png" alt="LoanLeaf Logo" />
+          </a>
+
+          <div class="nav-items">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">How it works</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+          </div>
+          <button class="nav-button">Get Started</button>
+
+          <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Side Drawer -->
+      <div class="side-drawer" id="sideDrawer">
+        <div class="drawer-content">
+          <button class="close-btn" id="closeDrawer">
+            <i class="fas fa-times"></i>
+          </button>
+          <a href="#" class="drawer-link">Home</a>
+          <a href="#" class="drawer-link">How it works</a>
+          <a href="#" class="drawer-link">About</a>
+          <a href="#" class="drawer-link">Contact</a>
+          <button class="drawer-button">Get Started</button>
+        </div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+   
+        <div class="text-column">
+          <div>
+            <h1 class="hero-title">Finance your future today</h1>
+            <p class="hero-subtitle">
+              Apply now and get quick approval with a fixed 5% interest rate.
+            </p>
+          </div>
+       
+
+          <div class="user-badge">
+            <img src="./assets/user1.png" alt="User 1" />
+            <img src="./assets/user2.png" alt="User 2" class="user-badge-image" />
+            <img src="./assets/user3.png" alt="User 3" class="user-badge-image" />
+            <p>
+              <span>120K+</span>
+              <span>Happy Customers</span>
+            </p>
+          </div>
+        </div>
+      
+
+        <div class="form-column">
+          <div class="glass-card">
+            <!-- form section start -->
+            <form id="loanForm" class="loan-form" novalidate>
+              <h2 class="form-title">Loan Application</h2>
+
+              <!-- form wrapper start -->
+              <div class="form-wrapper">
+                <div class="input-group">
+                  <div class="form-group">
+                    <label for="loanAmount">Select Loan Amount</label>
+                    <select id="loanAmount" class="form-control" required>
+                      <option value="Select amount" disabled selected>
+                        Select amount
+                      </option>
+                    </select>
+                    <div class="error-message" id="loanAmountError"></div>
+                  </div>
+                  <div id="paymentEstimate" class="form-group payment-display">
+                    <label for="loanAmount">Estimated Monthly Payment</label>
+                    <div class="payment-value">
+                        €<span id="estimatedAmount">0.00</span>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="fullName">Full Name</label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    class="form-control"
+                    required
+                    minlength="3"
+                    placeholder="Enter your full name"
+                  />
+                  <div class="error-message" id="fullNameError"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    required
+                    placeholder="Enter your email"
+                  />
+                  <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="form-control"
+                    required
+                    pattern="[0-9]{10,15}"
+                    placeholder="Enter your phone number"
+                  />
+                  <div class="error-message" id="phoneError"></div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="consent" required />
+                  <label for="consent">I agree to terms and conditions.</label>
+                  <div class="error-message" id="consentError"></div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="coApplicant" />
+                  <label for="coApplicant"
+                    >I am applying with co-applicant.</label
+                  >
+                  <div class="error-message" id="consentError"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">Apply Now</button>
+              </div>
+              <!-- form wrapper end -->
+            </form>
+            <!-- form section end -->
+          </div>
+          <div class="image-column">
+            <img src="./assets/happy_customer.png" alt="Happy Customer" />
+          </div>
+        </div>
+   
+      </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
