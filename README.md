@@ -5,7 +5,7 @@ A responsive landing page for a modern fintech product offering loans with a fix
 ## ✨ Features
 
 - 🎯 Hero section contians Headline with supporting text and loan application form
-- - 💡 Informative "Why Choose Us" section
+- 💡 Informative "Why Choose Us" section
 - 🔁 Step-by-step "How It Works" process
 - ⏱️ Dynamic countdown offer (Midsummer or New Year based on URL)
 - ❤️ User testimonials layout
