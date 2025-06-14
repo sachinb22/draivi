@@ -248,7 +248,153 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
   }
 
+  // Countdown Timer
+// Set target date based on URL parameter
+const urlParams = new URLSearchParams(window.location.search);
+const counterType = urlParams.get('counter');
+
+let targetDate;
+let targetLabel;
+
+if (counterType === 'newyear') {
+  targetDate = new Date('December 31, 2025 23:59:59').getTime();
+  targetLabel = "New Year's Eve, December 31, 2025";
+} else {
+  // Default to Midsummer Eve
+  targetDate = new Date('June 20, 2025 23:59:59').getTime();
+  targetLabel = "Midsummer Eve, June 20, 2025";
+}
+
+// Update the target date label
+document.getElementById('target-date-label').textContent = targetLabel;
+
+// Update the countdown every second
+const countdown = setInterval(function() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
   
+  // Time calculations
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Display the result
+  document.getElementById('days').textContent = days.toString().padStart(2, '0');
+  document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+  document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+  document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+  
+  // If the countdown is finished
+  if (distance < 0) {
+    clearInterval(countdown);
+    document.querySelector('.countdown-container').innerHTML = 
+      '<div class="countdown-ended">The offer has expired</div>';
+  }
+}, 1000);
+
+
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+  const prevButton = document.querySelector('.testimonial-nav .prev');
+  const nextButton = document.querySelector('.testimonial-nav .next');
+  const currentCounter = document.querySelector('.counter .current');
+  const totalCounter = document.querySelector('.counter .total');
+  let currentIndex = 1;
+  const totalTestimonials = testimonialCards.length;
+
+  // Set total testimonials counter
+  totalCounter.textContent = totalTestimonials;
+
+  // Update active testimonial
+  function updateTestimonial(index) {
+    testimonialCards.forEach(card => {
+      card.classList.remove('active');
+      if (parseInt(card.dataset.index) === index) {
+        card.classList.add('active');
+      }
+    });
+
+    currentCounter.textContent = index;
+    
+    // Update button states
+    prevButton.disabled = index === 1;
+    nextButton.disabled = index === totalTestimonials;
+  }
+
+  // Next testimonial
+  nextButton.addEventListener('click', function() {
+    if (currentIndex < totalTestimonials) {
+      currentIndex++;
+      updateTestimonial(currentIndex);
+    }
+  });
+
+  // Previous testimonial
+  prevButton.addEventListener('click', function() {
+    if (currentIndex > 1) {
+      currentIndex--;
+      updateTestimonial(currentIndex);
+    }
+  });
+
+  // Initialize
+  updateTestimonial(currentIndex);
+
+  // Auto-rotate testimonials (optional)
+  let autoRotate = setInterval(() => {
+    if (currentIndex < totalTestimonials) {
+      currentIndex++;
+    } else {
+      currentIndex = 1;
+    }
+    updateTestimonial(currentIndex);
+  }, 5000);
+
+  // Pause auto-rotate on hover
+  const cardsContainer = document.querySelector('.testimonial-cards');
+  cardsContainer.addEventListener('mouseenter', () => {
+    clearInterval(autoRotate);
+  });
+  cardsContainer.addEventListener('mouseleave', () => {
+    autoRotate = setInterval(() => {
+      if (currentIndex < totalTestimonials) {
+        currentIndex++;
+      } else {
+        currentIndex = 1;
+      }
+      updateTestimonial(currentIndex);
+    }, 5000);
+  });
+
+
+  //Faq section 
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', function() {
+      // Toggle aria-expanded attribute
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      
+      // Toggle the answer visibility
+      const answer = this.nextElementSibling;
+      answer.setAttribute('aria-hidden', isExpanded);
+      
+      // Close other open FAQs
+      if (!isExpanded) {
+        faqQuestions.forEach(q => {
+          if (q !== question && q.getAttribute('aria-expanded') === 'true') {
+            q.setAttribute('aria-expanded', 'false');
+            q.nextElementSibling.setAttribute('aria-hidden', 'true');
+          }
+        });
+      }
+    });
+    
+    // Initialize attributes
+    question.setAttribute('aria-expanded', 'false');
+    question.nextElementSibling.setAttribute('aria-hidden', 'true');
+  });
 
 
 });
