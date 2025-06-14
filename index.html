@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Hero Section -->
+    <!-- Hero + navbar Section -->
     <section class="hero">
       <!-- Navbar -->
       <nav class="navbar">
@@ -56,7 +56,9 @@
       <div class="hero-content">
         <div class="text-column">
           <div>
-            <h1 class="hero-title">Finance your future today</h1>
+            <h1 class="hero-title">
+              Finance <span class="highlight">your future</span> today
+            </h1>
             <p class="hero-subtitle">
               Apply now and get quick approval with a fixed 5% interest rate.
             </p>
@@ -165,9 +167,9 @@
             </form>
             <!-- form section end -->
           </div>
-          <div class="image-column">
+          <!-- <div class="image-column">
             <img src="./assets/happy_customer.png" alt="Happy Customer" />
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -327,266 +329,342 @@
     </section>
 
     <!-- Testimonials Section -->
-<section class="testimonials">
-  <div class="container">
-    <div class="testimonial-grid">
-      <!-- Left Column -->
-      <div class="testimonial-content">
-        <span class="section-subtitle">TESTIMONIAL</span>
-        <h2 class="section-title">We've built trust with reviews from real users</h2>
-        <p class="section-description">Boost your credibility by featuring genuine testimonials from real users, showcasing their positive experiences and satisfaction with LoanLeaf services.</p>
-        
-        <div class="testimonial-nav">
-          <button class="nav-arrow prev" disabled aria-label="Previous testimonial">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <div class="counter"><span class="current">1</span> of <span class="total">4</span></div>
-          <button class="nav-arrow next" aria-label="Next testimonial">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+    <section class="testimonials">
+      <div class="container">
+        <div class="testimonial-grid">
+          <!-- Left Column -->
+          <div class="testimonial-content">
+            <span class="section-subtitle">TESTIMONIAL</span>
+            <h2 class="section-title">
+              We've built trust with reviews from real users
+            </h2>
+            <p class="section-description">
+              Boost your credibility by featuring genuine testimonials from real
+              users, showcasing their positive experiences and satisfaction with
+              LoanLeaf services.
+            </p>
+
+            <div class="testimonial-nav">
+              <button
+                class="nav-arrow prev"
+                disabled
+                aria-label="Previous testimonial"
+              >
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="counter">
+                <span class="current">1</span> of <span class="total">4</span>
+              </div>
+              <button class="nav-arrow next" aria-label="Next testimonial">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column - Testimonial Cards -->
+          <div class="testimonial-cards">
+            <!-- Card 1 (Active) -->
+            <div class="testimonial-card active" data-index="1">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "I was amazed at how quickly I got approved for my loan. The
+                process was so easy and straightforward."
+              </p>
+              <div class="user-info">
+                <img
+                  src="./assets/user1.png"
+                  alt="Sarah Johnson"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                  class="user-img"
+                />
+                <div class="user-details">
+                  <h4 class="user-name">Sarah Johnson</h4>
+                  <p class="user-location">Helsinki, Finland</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="testimonial-card" data-index="2">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="testimonial-text">
+                "The customer service was exceptional. They guided me through
+                every step and answered all my questions patiently."
+              </p>
+              <div class="user-info">
+                <img
+                  src="./assets/user2.png"
+                  alt="Michael Chen"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                  class="user-img"
+                />
+                <div class="user-details">
+                  <h4 class="user-name">Michael Chen</h4>
+                  <p class="user-location">Turku, Finland</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="testimonial-card" data-index="3">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "I've used several loan services before, but none were as
+                transparent and fair with their rates as LoanLeaf."
+              </p>
+              <div class="user-info">
+                <img
+                  src="./assets/user3.png"
+                  alt="Emma Rodriguez"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                  class="user-img"
+                />
+                <div class="user-details">
+                  <h4 class="user-name">Emma Rodriguez</h4>
+                  <p class="user-location">Kuopio, Finland</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Right Column - Testimonial Cards -->
-      <div class="testimonial-cards">
-        <!-- Card 1 (Active) -->
-        <div class="testimonial-card active" data-index="1">
-          <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">FAQS</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-description">
+            Find quick answers to common questions about LoanLeaf services and
+            processes.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I apply for a loan with LoanLeaf?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Applying is simple! Just click on the "Apply Now" button on our
+                website and complete the online application form. You'll need to
+                provide some basic personal and financial information. The
+                entire process takes about 10 minutes, and you'll receive a
+                preliminary decision immediately.
+              </p>
+            </div>
           </div>
-          <p class="testimonial-text">"I was amazed at how quickly I got approved for my loan. The process was so easy and straightforward."</p>
-          <div class="user-info">
-            <img src="./assets/user1.png" alt="Sarah Johnson" width="50" height="50" loading="lazy" class="user-img">
-            <div class="user-details">
-              <h4 class="user-name">Sarah Johnson</h4>
-              <p class="user-location">New York, USA</p>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What are the eligibility requirements?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                To be eligible for a LoanLeaf personal loan, you must: be at
+                least 18 years old, have a valid government-issued ID, provide
+                proof of income, have an active bank account, and meet our
+                credit requirements. Specific requirements may vary based on
+                loan amount and term.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How long does approval take?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Most applicants receive an instant preliminary decision. Final
+                approval typically takes 1-2 business days after we've verified
+                all your information. Once approved, funds are usually deposited
+                into your account within 1 business day.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What interest rates can I expect?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Interest rates range from 5% to 15% APR depending on your
+                creditworthiness, loan amount, and repayment term. We offer
+                fixed-rate loans, so your rate won't change over the life of
+                your loan.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are there any prepayment penalties?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                No, there are absolutely no prepayment penalties with LoanLeaf.
+                You can pay off your loan early at any time without additional
+                fees, and you'll save on interest by doing so.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I make payments?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We offer several convenient payment options: automatic bank
+                transfers (ACH), online payments through your LoanLeaf account,
+                debit card payments, or checks by mail. You can also set up
+                autopay to ensure you never miss a payment.
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="testimonial-card" data-index="2">
-          <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-          </div>
-          <p class="testimonial-text">"The customer service was exceptional. They guided me through every step and answered all my questions patiently."</p>
-          <div class="user-info">
-            <img src="./assets/user2.png" alt="Michael Chen" width="50" height="50" loading="lazy" class="user-img">
-            <div class="user-details">
-              <h4 class="user-name">Michael Chen</h4>
-              <p class="user-location">Toronto, Canada</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="testimonial-card" data-index="3">
-          <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <p class="testimonial-text">"I've used several loan services before, but none were as transparent and fair with their rates as LoanLeaf."</p>
-          <div class="user-info">
-            <img src="./assets/user3.png" alt="Emma Rodriguez" width="50" height="50" loading="lazy" class="user-img">
-            <div class="user-details">
-              <h4 class="user-name">Emma Rodriguez</h4>
-              <p class="user-location">London, UK</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="testimonial-card" data-index="4">
-          <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-          </div>
-          <p class="testimonial-text">"The flexible repayment options saved me during a tough financial period. Highly recommend their services!"</p>
-          <div class="user-info">
-            <img src="./assets/user4.png" alt="David Kim" width="50" height="50" loading="lazy" class="user-img">
-            <div class="user-details">
-              <h4 class="user-name">David Kim</h4>
-              <p class="user-location">Sydney, Australia</p>
-            </div>
-          </div>
+        <div class="faq-cta">
+          <p>
+            Still have questions? <a href="#">Contact our support team</a> for
+            assistance.
+          </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="faq-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-subtitle">FAQS</span>
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <p class="section-description">Find quick answers to common questions about LoanLeaf services and processes.</p>
-    </div>
-
-    <div class="faq-container">
-      <!-- FAQ Item 1 -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>How do I apply for a loan with LoanLeaf?</span>
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Applying is simple! Just click on the "Apply Now" button on our website and complete the online application form. You'll need to provide some basic personal and financial information. The entire process takes about 10 minutes, and you'll receive a preliminary decision immediately.</p>
-        </div>
-      </div>
-
-      <!-- FAQ Item 2 -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>What are the eligibility requirements?</span>
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>To be eligible for a LoanLeaf personal loan, you must: be at least 18 years old, have a valid government-issued ID, provide proof of income, have an active bank account, and meet our credit requirements. Specific requirements may vary based on loan amount and term.</p>
-        </div>
-      </div>
-
-      <!-- FAQ Item 3 -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>How long does approval take?</span>
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Most applicants receive an instant preliminary decision. Final approval typically takes 1-2 business days after we've verified all your information. Once approved, funds are usually deposited into your account within 1 business day.</p>
-        </div>
-      </div>
-
-      <!-- FAQ Item 4 -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>What interest rates can I expect?</span>
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Interest rates range from 5% to 15% APR depending on your creditworthiness, loan amount, and repayment term. We offer fixed-rate loans, so your rate won't change over the life of your loan.</p>
-        </div>
-      </div>
-
-      <!-- FAQ Item 5 -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>Are there any prepayment penalties?</span>
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>No, there are absolutely no prepayment penalties with LoanLeaf. You can pay off your loan early at any time without additional fees, and you'll save on interest by doing so.</p>
-        </div>
-      </div>
-
-      <!-- FAQ Item 6 -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>How do I make payments?</span>
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>We offer several convenient payment options: automatic bank transfers (ACH), online payments through your LoanLeaf account, debit card payments, or checks by mail. You can also set up autopay to ensure you never miss a payment.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="faq-cta">
-      <p>Still have questions? <a href="#">Contact our support team</a> for assistance.</p>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Footer Section -->
-<footer class="footer">
-  <!-- Main Footer -->
-  <div class="main-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Column 1 - Logo and Contact -->
-        <div class="footer-column">
-          <div class="footer-logo">
-            <img src="./assets/WhiteLogo.png" alt="LoanLeaf Logo" width="150" height="50" loading="lazy">
-          </div>
-          <p class="footer-description">
-            LoanLeaf provides simple, transparent financial solutions to help you achieve your goals with competitive rates and exceptional service.
-          </p>
-          <div class="contact-details">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>hello@loanleaf.com</span>
+    <footer class="footer">
+      <!-- Main Footer -->
+      <div class="main-footer">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Column 1 - Logo and Contact -->
+            <div class="footer-column">
+              <div class="footer-logo">
+                <img
+                  src="./assets/WhiteLogo.png"
+                  alt="LoanLeaf Logo"
+                  width="150"
+                  height="50"
+                  loading="lazy"
+                />
+              </div>
+              <p class="footer-description">
+                LoanLeaf provides simple, transparent financial solutions to
+                help you achieve your goals with competitive rates and
+                exceptional service.
+              </p>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <span>hello@loanleaf.com</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>+358 - 1234567</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>123 Financial Street, Turku, Finland</span>
+                </div>
+              </div>
             </div>
-            <div class="contact-item">
-              <i class="fas fa-phone-alt"></i>
-              <span>+358 - 1234567</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>123 Financial Street, Turku, Finland</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Column 2 - Links -->
-        <div class="footer-column">
-          <div class="links-grid">
-            <div class="links-group">
-              <h3 class="links-title">Links</h3>
-              <ul class="footer-links">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">How it works</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-            <div class="links-group">
-              <h3 class="links-title">Other Pages</h3>
-              <ul class="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Help & Support</a></li>
-                <li><a href="#">FAQs</a></li>
-              </ul>
+            <!-- Column 2 - Links -->
+            <div class="footer-column">
+              <div class="links-grid">
+                <div class="links-group">
+                  <h3 class="links-title">Links</h3>
+                  <ul class="footer-links">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="links-group">
+                  <h3 class="links-title">Other Pages</h3>
+                  <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">FAQs</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Bottom Footer -->
-  <div class="bottom-footer">
-    <div class="container">
-      <div class="bottom-footer-grid">
-        <div class="social-links">
-          <span>Connect with us:</span>
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <div class="copyright">
-          &copy; 2025 LoanLeaf. All rights reserved.
+      <!-- Bottom Footer -->
+      <div class="bottom-footer">
+        <div class="container">
+          <div class="bottom-footer-grid">
+            <div class="social-links">
+              <span>Connect with us:</span>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+            <div class="copyright">
+              &copy; 2025 LoanLeaf. All rights reserved.
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
     <script src="script.js"></script>
   </body>

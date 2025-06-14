@@ -1,4 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  // Navbar Scroll Behavior
+let lastScrollPosition = 0;
+const navbar = document.querySelector('.navbar');
+const navbarHeight = navbar.offsetHeight;
+
+window.addEventListener('scroll', function() {
+  const currentScrollPosition = window.pageYOffset;
+  
+  if (currentScrollPosition <= 100) {
+    // At top of page
+    navbar.classList.remove('scrolled');
+    navbar.classList.remove('hidden');
+  } else {
+    navbar.classList.add('scrolled');
+    
+    // Scroll direction detection
+    if (currentScrollPosition > lastScrollPosition) {
+      // Scrolling down
+      if (currentScrollPosition > navbarHeight) {
+        navbar.classList.add('hidden');
+      }
+    } else {
+      // Scrolling up
+      navbar.classList.remove('hidden');
+    }
+  }
+  
+  lastScrollPosition = currentScrollPosition;
+});
+
+
   // Mobile Menu Toggle
   const hamburger = document.getElementById("hamburger");
   const sideDrawer = document.getElementById("sideDrawer");
