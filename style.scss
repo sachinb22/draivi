@@ -861,3 +861,147 @@ img {
     
   }
 }
+
+// Special Offer Section
+.special-offer {
+  padding: 5rem 2rem;
+  position: relative;
+  background: linear-gradient(rgba($dark-color, 0.2), rgba($primary-color, 0.2)), 
+              url('./assets/summer.png') no-repeat center center;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .offer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .offer-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .offer-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  .countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+
+    @media (max-width: 576px) {
+      gap: 0.5rem;
+    }
+  }
+
+  .countdown-box {
+    background: rgba($white, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: $border-radius;
+    padding: 1rem 1.5rem;
+    min-width: 90px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    @media (max-width: 768px) {
+      min-width: 70px;
+      padding: 0.8rem 1rem;
+    }
+
+    @media (max-width: 576px) {
+      min-width: 60px;
+      padding: 0.6rem 0.8rem;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      background: rgba($white, 0.25);
+    }
+  }
+
+  .countdown-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .countdown-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+
+    @media (max-width: 576px) {
+      font-size: 0.7rem;
+    }
+  }
+
+  .countdown-separator {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 -0.5rem;
+    color: $primary-color;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 1rem;
+      margin: 0 -0.3rem;
+    }
+  }
+
+  .offer-button {
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: $border-radius;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
