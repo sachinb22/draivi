@@ -1104,6 +1104,19 @@ img {
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 0.75rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 2px;
+        background-color: $primary-color;
+      }
     }
 
     .section-title {
