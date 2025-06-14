@@ -423,42 +423,10 @@ img {
 .hero .form-column .glass-card .loan-form .form-wrapper .submit-btn:active {
   transform: translateY(0);
 }
-.hero .image-column {
-  position: absolute;
-  right: 5%;
-  bottom: 0;
-  width: 50%;
-  max-width: 700px;
-  height: auto;
-  z-index: 1;
-}
-@media (max-width: 1440px) {
-  .hero .image-column {
-    right: 0;
-    width: 45%;
-  }
-}
-@media (max-width: 1024px) {
-  .hero .image-column {
-    position: relative;
-    width: 80%;
-    max-width: 500px;
-    margin: 2rem auto 0;
-    right: auto;
-    order: -1;
-  }
-}
-@media (max-width: 768px) {
-  .hero .image-column {
-    width: 100%;
-    max-width: 400px;
-  }
-}
-.hero .image-column img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  object-position: bottom;
+.hero .form-column .glass-card .loan-form p {
+  font-size: 0.9rem;
+  color: rgba(1, 8, 27, 0.8);
+  margin-top: -1rem;
 }
 .hero .user-badge {
   display: flex;

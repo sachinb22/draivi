@@ -346,187 +346,155 @@ img {
         margin-bottom: 0.5rem;
       }
 
-   .loan-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  .form-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-
-    .input-group {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-
-      @media (max-width: 600px) {
+      .loan-form {
+        display: flex;
         flex-direction: column;
-        gap: 1.2rem;
-      }
+        gap: 1rem;
 
-      .form-group {
-        flex: 1;
-        min-width: 200px;
+        .form-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 1.2rem;
 
-        label {
-          display: block;
-          margin-bottom: 0.5rem;
-          font-weight: 500;
-          color: rgba($dark-color, 0.9);
-          font-size: 0.95rem;
+          .input-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            @media (max-width: 600px) {
+              flex-direction: column;
+              gap: 1.2rem;
+            }
+
+            .form-group {
+              flex: 1;
+              min-width: 200px;
+
+              label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                color: rgba($dark-color, 0.9);
+                font-size: 0.95rem;
+              }
+            }
+          }
+
+          .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba($white, 0.9);
+            border: 1px solid rgba($dark-color, 0.15);
+            border-radius: $border-radius-sm;
+            color: $dark-color;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+
+            &:focus {
+              outline: none;
+              border-color: $primary-color;
+              box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+            }
+
+            &::placeholder {
+              color: rgba($dark-color, 0.4);
+            }
+          }
+
+          select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232e68fd' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 12px;
+            padding-right: 2.5rem;
+            cursor: pointer;
+          }
+
+          .payment-display {
+            .payment-value {
+              padding: 0.6rem 1rem;
+              background: rgba($primary-color, 0.08);
+              border-radius: $border-radius-sm;
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: $primary-color;
+            }
+          }
+
+          .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            position: relative;
+
+            input[type="checkbox"] {
+              width: 20px;
+              height: 20px;
+              margin-top: 2px;
+              accent-color: $primary-color;
+              cursor: pointer;
+            }
+
+            label {
+              margin: 0;
+              font-weight: 500;
+              cursor: pointer;
+              flex: 1;
+            }
+          }
+
+          .error-message {
+            color: #dc3545;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            display: none;
+          }
+
+          .has-error {
+            .form-control {
+              border-color: #dc3545 !important;
+
+              &:focus {
+                box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.2);
+              }
+            }
+
+            // &.checkbox-group {
+            //   border: 1px solid #dc3545;
+            // }
+          }
+
+          .submit-btn {
+            background-color: $primary-color;
+            color: $white;
+            border: none;
+            padding: 1rem;
+            border-radius: $border-radius;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 0.5rem;
+            width: 100%;
+
+            &:hover {
+              background-color: darken($primary-color, 8%);
+              transform: translateY(-1px);
+            }
+
+            &:active {
+              transform: translateY(0);
+            }
+          }
+        }
+        p{
+          font-size: 0.9rem;
+          color: rgba($dark-color, 0.8);
+          margin-top: -1rem;
         }
       }
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      background: rgba($white, 0.9);
-      border: 1px solid rgba($dark-color, 0.15);
-      border-radius: $border-radius-sm;
-      color: $dark-color;
-      font-size: 1rem;
-      transition: all 0.2s ease;
-
-      &:focus {
-        outline: none;
-        border-color: $primary-color;
-        box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
-      }
-
-      &::placeholder {
-        color: rgba($dark-color, 0.4);
-      }
-    }
-
-    select.form-control {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232e68fd' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 1rem center;
-      background-size: 12px;
-      padding-right: 2.5rem;
-      cursor: pointer;
-    }
-
-    .payment-display {
-      .payment-value {
-        padding: 0.6rem 1rem;
-        background: rgba($primary-color, 0.08);
-        border-radius: $border-radius-sm;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: $primary-color;
-      }
-    }
-
-    .checkbox-group {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      padding: 0.5rem 0;
-      position: relative;
-
-
-      input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-        margin-top: 2px;
-        accent-color: $primary-color;
-        cursor: pointer;
-      }
-
-      label {
-        margin: 0;
-        font-weight: 500;
-        cursor: pointer;
-        flex: 1;
-      }
-    }
-
-    .error-message {
-      color: #dc3545;
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-      display: none;
-    }
-
-    .has-error {
-      .form-control {
-        border-color: #dc3545 !important;
-        
-        &:focus {
-          box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.2);
-        }
-      }
-      
-      // &.checkbox-group {
-      //   border: 1px solid #dc3545;
-      // }
-    }
-
-    .submit-btn {
-      background-color: $primary-color;
-      color: $white;
-      border: none;
-      padding: 1rem;
-      border-radius: $border-radius;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      margin-top: 0.5rem;
-      width: 100%;
-      
-      &:hover {
-        background-color: darken($primary-color, 8%);
-        transform: translateY(-1px);
-      }
-      
-      &:active {
-        transform: translateY(0);
-      }
-    }
-  }
-}
-    }
-  }
-
-  .image-column {
-    position: absolute;
-    right: 5%;
-    bottom: 0;
-    width: 50%;
-    max-width: 700px;
-    height: auto;
-    z-index: 1;
-
-    @media (max-width: 1440px) {
-      right: 0;
-      width: 45%;
-    }
-
-    @media (max-width: 1024px) {
-      position: relative;
-      width: 80%;
-      max-width: 500px;
-      margin: 2rem auto 0;
-      right: auto;
-      order: -1;
-    }
-
-    @media (max-width: 768px) {
-      width: 100%;
-      max-width: 400px;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      object-position: bottom;
     }
   }
 
