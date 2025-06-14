@@ -88,82 +88,59 @@
             <!-- form section start -->
             <form id="loanForm" class="loan-form" novalidate>
               <h2 class="form-title">Loan Application</h2>
-
-              <!-- form wrapper start -->
+              
               <div class="form-wrapper">
                 <div class="input-group">
                   <div class="form-group">
                     <label for="loanAmount">Select Loan Amount</label>
-                    <select id="loanAmount" class="form-control" required>
-                      <option value="Select amount" disabled selected>
-                        Select amount
-                      </option>
+                    <select id="loanAmount" class="form-control" required aria-describedby="loanAmountError">
+                      <option value="" disabled selected>Select amount</option>
                     </select>
-                    <div class="error-message" id="loanAmountError"></div>
+                    <div id="loanAmountError" class="error-message" role="alert"></div>
                   </div>
                   <div id="paymentEstimate" class="form-group payment-display">
-                    <label for="loanAmount">Estimated Monthly Payment</label>
-                    <div class="payment-value">
-                      €<span id="estimatedAmount">0.00</span>
-                    </div>
+                    <label>Estimated Monthly Payment</label>
+                    <div class="payment-value">€<span id="estimatedAmount">0.00</span></div>
                   </div>
                 </div>
-
+            
                 <div class="form-group">
                   <label for="fullName">Full Name</label>
-                  <input
-                    type="text"
-                    id="fullName"
-                    class="form-control"
-                    required
-                    minlength="3"
-                    placeholder="Enter your full name"
-                  />
-                  <div class="error-message" id="fullNameError"></div>
+                  <input type="text" id="fullName" class="form-control" required minlength="3" 
+                         placeholder="Enter your full name" aria-describedby="fullNameError">
+                  <div id="fullNameError" class="error-message" role="alert"></div>
                 </div>
-
+            
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    class="form-control"
-                    required
-                    placeholder="Enter your email"
-                  />
-                  <div class="error-message" id="emailError"></div>
+                  <input type="email" id="email" class="form-control" required 
+                         placeholder="Enter your email" aria-describedby="emailError">
+                  <div id="emailError" class="error-message" role="alert"></div>
                 </div>
-
+            
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    class="form-control"
-                    required
-                    pattern="[0-9]{10,15}"
-                    placeholder="Enter your phone number"
-                  />
-                  <div class="error-message" id="phoneError"></div>
+                  <input type="tel" id="phone" class="form-control" required 
+                         pattern="^(\+358|0)\s?(\d{2,3})\s?(\d{5,7})$"
+                         placeholder="+358 40 1234567" aria-describedby="phoneError">
+                  <div id="phoneError" class="error-message" role="alert"></div>
                 </div>
-
-                <div class="form-group checkbox-group">
-                  <input type="checkbox" id="consent" required />
-                  <label for="consent">I agree to terms and conditions.</label>
-                  <div class="error-message" id="consentError"></div>
+                <div class="check-form">
+                  <div class="form-group checkbox-group error-wrapper">
+                    <input type="checkbox" id="consent" required aria-describedby="consentError">
+                    <label for="consent">I agree to terms and conditions.</label>
+                  </div>
+                  <div id="consentError" class="error-message" role="alert"></div>
+              
+                  <div class="form-group checkbox-group">
+                    <input type="checkbox" id="coApplicant">
+                    <label for="coApplicant">I am applying with co-applicant.</label>
+                  </div>
                 </div>
-
-                <div class="form-group checkbox-group">
-                  <input type="checkbox" id="coApplicant" />
-                  <label for="coApplicant"
-                    >I am applying with co-applicant.</label
-                  >
-                  <div class="error-message" id="consentError"></div>
-                </div>
-
-                <button type="submit" class="submit-btn">Apply Now</button>
+                
+            
+                <button type="submit" class="submit-btn" aria-live="polite">Apply Now</button>
               </div>
-              <!-- form wrapper end -->
             </form>
             <!-- form section end -->
           </div>

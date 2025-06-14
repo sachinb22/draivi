@@ -307,94 +307,101 @@ img {
 .hero .form-column .glass-card .loan-form {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 1rem;
 }
 .hero .form-column .glass-card .loan-form .form-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 1.2rem;
 }
 .hero .form-column .glass-card .loan-form .form-wrapper .input-group {
   display: flex;
-  gap: 0.4rem;
+  gap: 1rem;
   flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .hero .form-column .glass-card .loan-form .form-wrapper .input-group {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 }
 .hero .form-column .glass-card .loan-form .form-wrapper .input-group .form-group {
   flex: 1;
   min-width: 200px;
 }
 .hero .form-column .glass-card .loan-form .form-wrapper .input-group .form-group label {
-  margin-bottom: 0.75rem;
+  display: block;
+  margin-bottom: 0.5rem;
   font-weight: 500;
   color: rgba(1, 8, 27, 0.9);
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .input-group .form-group .form-control {
-  padding: 0.8rem;
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(1, 8, 27, 0.1);
-  border-radius: 12px;
-  color: #01081b;
-  cursor: pointer;
-  width: 100%;
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .input-group .form-group .form-control::placeholder {
-  color: rgba(1, 8, 27, 0.5);
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .input-group .form-group .form-control:focus {
-  outline: none;
-  border-color: rgba(46, 104, 253, 0.5);
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .input-group .payment-display .payment-value {
-  padding: 0.6rem 0.8rem;
-  background: rgba(46, 104, 253, 0.1);
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .form-group {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .form-group label {
-  margin-bottom: 0.75rem;
-  font-weight: 500;
-  color: rgba(1, 8, 27, 0.9);
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .form-group .form-control {
-  padding: 0.8rem;
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(1, 8, 27, 0.1);
-  border-radius: 12px;
-  color: #01081b;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .form-group .form-control::placeholder {
-  color: rgba(1, 8, 27, 0.5);
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .form-group .form-control:focus {
-  outline: none;
-  border-color: rgba(46, 104, 253, 0.5);
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .form-group.checkbox-group {
-  flex-direction: row;
-  align-items: center;
-  gap: 0.75rem;
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .form-group.checkbox-group input[type=checkbox] {
-  width: 18px;
-  height: 18px;
-  accent-color: #2e68fd;
-}
-.hero .form-column .glass-card .loan-form .form-wrapper .form-group.checkbox-group label {
-  margin-bottom: 0;
-  font-weight: normal;
   font-size: 0.95rem;
 }
-.hero .form-column .glass-card .loan-form .form-wrapper .form-group.has-error .form-control {
-  border-color: #dc3545;
+.hero .form-column .glass-card .loan-form .form-wrapper .form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(1, 8, 27, 0.15);
+  border-radius: 8px;
+  color: #01081b;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+.hero .form-column .glass-card .loan-form .form-wrapper .form-control:focus {
+  outline: none;
+  border-color: #2e68fd;
+  box-shadow: 0 0 0 2px rgba(46, 104, 253, 0.2);
+}
+.hero .form-column .glass-card .loan-form .form-wrapper .form-control::placeholder {
+  color: rgba(1, 8, 27, 0.4);
+}
+.hero .form-column .glass-card .loan-form .form-wrapper select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232e68fd' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+.hero .form-column .glass-card .loan-form .form-wrapper .payment-display .payment-value {
+  padding: 0.6rem 1rem;
+  background: rgba(46, 104, 253, 0.08);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2e68fd;
+}
+.hero .form-column .glass-card .loan-form .form-wrapper .checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+.hero .form-column .glass-card .loan-form .form-wrapper .checkbox-group input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: #2e68fd;
+  cursor: pointer;
+}
+.hero .form-column .glass-card .loan-form .form-wrapper .checkbox-group label {
+  margin: 0;
+  font-weight: 500;
+  cursor: pointer;
+  flex: 1;
+}
+.hero .form-column .glass-card .loan-form .form-wrapper .error-message {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+.hero .form-column .glass-card .loan-form .form-wrapper .has-error .form-control {
+  border-color: #dc3545 !important;
+}
+.hero .form-column .glass-card .loan-form .form-wrapper .has-error .form-control:focus {
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.2);
 }
 .hero .form-column .glass-card .loan-form .form-wrapper .submit-btn {
   background-color: #2e68fd;
@@ -405,13 +412,16 @@ img {
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   margin-top: 0.5rem;
   width: 100%;
 }
 .hero .form-column .glass-card .loan-form .form-wrapper .submit-btn:hover {
-  background-color: rgb(2.3507109005, 70.5213270142, 245.6492890995);
-  transform: translateY(-2px);
+  background-color: rgb(5.5867298578, 74.8018957346, 252.6132701422);
+  transform: translateY(-1px);
+}
+.hero .form-column .glass-card .loan-form .form-wrapper .submit-btn:active {
+  transform: translateY(0);
 }
 .hero .image-column {
   position: absolute;
